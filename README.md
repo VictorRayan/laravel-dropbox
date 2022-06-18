@@ -98,7 +98,7 @@ class AppServiceProvider extends ServiceProvider
 This will be used to AppServiceProvider retrieve this value and make a POST request to Dropbox domain with operations paramters.</p>
 
 
-### 5 - Follow to Dropbox Developers, create your app (the API), set up the permissions and Generate a Acccess Token:
+### 5 - Follow to Dropbox Developers, create your app (the API), set up the permissions and Generate an Acccess Token:
 <p  align="center"><a href="https://www.dropbox.com/developers/apps/">https://www.dropbox.com/developers/apps/<a></p>
   
 
@@ -107,7 +107,7 @@ This will be used to AppServiceProvider retrieve this value and make a POST requ
         DROPBOX_ACCESS_TOKEN=Your_gotten_token_here_without_quotes
     
 
-### Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
+### 6 - Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
   
   ```
   use Illuminate\Support\Facades\Storage;
