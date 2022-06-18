@@ -94,7 +94,7 @@ class AppServiceProvider extends ServiceProvider
         ]
 
   ```
-  <p>Notice that already has added the line to get the Dropbox Access Token from environment variables (authorization_toekn).
+  <p>Notice that already has added the line to get the Dropbox Access Token from environment variables (authorization_token).
 This will be used to AppServiceProvider retrieve this value and make a POST request to Dropbox domain with operations paramters.</p>
 
 
