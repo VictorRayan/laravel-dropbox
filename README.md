@@ -16,9 +16,9 @@
  <ul>
   <li>Create a laravel project with Composer.</li>
   <li>Get needed Dropbox dependencies and libraries with Composer.</li>
-  <li>Configure the Service Provider to runs Dropbox service (paste te ServiceProvide source code from Custom Filesystem article from Laravel Documentation).</li>
+  <li>Configure the Service Provider to runs Dropbox service (paste te AppServiceProvider source code from Custom Filesystem article from Laravel Documentation).</li>
   <li>Create a driver in framework filesystem: <strong>config>filesystems.php</strong>.
-  At same time define a new atribure named "authorization_token" to get the env var talked about ahead.</li>
+  At same time define a new attribute named "authorization_token" to get the env var talked about ahead.</li>
   <li>Create an app in <a href="https://www.dropbox.com/developers/apps">Dropbox Developers</a> and generate an Access Token, afet set all permissions of <strong>Files and Folders</strong> in "Permissions" tab.</li>
   <li>Set up the Dropbox Access Token envinroment variavel in <strong>.env</strong> file with gotten token.</li>
   <li>Create a test Route in <strong>routes>web.php</strong> to do any operation inside Dropbox through Laravel.</li>
