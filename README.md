@@ -24,7 +24,7 @@
   <li>Create a test Route in <strong>routes>web.php</strong> to do any operation inside Dropbox through Laravel.</li>
  </ul>
   
-  ### If you prefer you can just to clone this repository and adapt to your neds.
+  ### If you prefer you can just to clone this repository and adapt to your needs.
 ##
 ##
 ## Step by Step
