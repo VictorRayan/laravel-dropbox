@@ -19,7 +19,7 @@
   <li>Configure the Service Provider to runs Dropbox service (paste te ServiceProvide source code from Custom Filesystem article from Laravel Documentation).</li>
   <li>Create a driver in framework filesystem: <strong>config>filesystems.php</strong>.
   At same time define a new atribure named "authorization_token" to get the env var talked about ahead.</li>
-  <li>Create a app in <a href="https://www.dropbox.com/developers/apps">Dropbox Developers</a> and generate a Access Token, afet set all permissions of <strong>Files and Folders</strong> in "Permissions" tab.</li>
+  <li>Create an app in <a href="https://www.dropbox.com/developers/apps">Dropbox Developers</a> and generate an Access Token, afet set all permissions of <strong>Files and Folders</strong> in "Permissions" tab.</li>
   <li>Set up the Dropbox Access Token envinroment variavel in <strong>.env</strong> file with gotten token.</li>
   <li>Create a test Route in <strong>routes>web.php</strong> to do any operation inside Dropbox through Laravel.</li>
  </ul>
@@ -102,12 +102,12 @@ This will be used to AppServiceProvider retrieve this value and make a POST requ
 <p  align="center"><a href="https://www.dropbox.com/developers/apps/">https://www.dropbox.com/developers/apps/<a></p>
   
 
-### Set the DROPBOX_ACCESS_TOKEN environment variable in .env:
+### 6 - Set the DROPBOX_ACCESS_TOKEN environment variable in .env:
     
         DROPBOX_ACCESS_TOKEN=Your_gotten_token_here_without_quotes
     
 
-### 6 - Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
+### 7 - Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
   
   ```
   use Illuminate\Support\Facades\Storage;
@@ -129,9 +129,11 @@ This will be used to AppServiceProvider retrieve this value and make a POST requ
   ```
   <p>Notice that this route will invoke the Storage class, invoke the disk() method to tell what driver from filesystems.php will be used, in our case the 'dropbox'. And after sequentially invoking a method to make a directory, ie, its will get the all needed atributes through these methods to build a POST request inside framework and sent it to Dropbox with Authentication token joinned to grant the permission for request be answered.</p>
   
-  ### Run the application and test it!
+  ### 8 - Run the application and test it!
   ```
   php arisan serve
+
+  https://localhost:8000/dropbox-mkdir
   ```
 ##
 ##
