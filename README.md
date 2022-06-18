@@ -7,7 +7,7 @@
   <p>
     If you wish to store, change or delete files and folders inside a Dropbox account through a Laravel application automatically, 
     this tutorial will be useful for you.
-    Now imagine if your case is that you have to deploy any Laravel application to ephemeral filesystem server, and you don't want to user Cloud such as Amazon S3 / Cloud, you can integrate your app to use Dropbox as your Storage.
+    Now imagine if your case is that you have to deploy any Laravel application to ephemeral filesystem server, and you don't want to use Cloud such as Amazon S3 / Cloud, you can integrate your app to use Dropbox as your Storage.
   </p>
 
 ## How was this project made?
