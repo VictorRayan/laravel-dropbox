@@ -103,9 +103,9 @@ This will be used to AppServiceProvider retrieve this value and make a POST requ
   
 
 ### Set the DROPBOX_ACCESS_TOKEN environment variable in .env:
-    ```
-      DROPBOX_ACCESS_TOKEN=Your_gotten_token_here_without_quotes
-    ```
+    
+        DROPBOX_ACCESS_TOKEN=Your_gotten_token_here_without_quotes
+    
 
 ### Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
   
