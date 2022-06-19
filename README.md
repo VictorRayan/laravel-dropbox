@@ -107,7 +107,7 @@ This will be used to AppServiceProvider retrieve this value and make a POST requ
         DROPBOX_ACCESS_TOKEN=Your_gotten_token_here_without_quotes
     
 
-### 7 - Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF pretection.
+### 7 - Creating a test Route that does a "make directory" or mkdir command through Storage API using the dropbox driver to perform a folder creation request fro Dropbox in POST, but the Route don't need to be of type POST, because se Dropbox request submittion is made internally by framework, and that is why don't need to put a CSRF protection.
   
   ```
   use Illuminate\Support\Facades\Storage;
