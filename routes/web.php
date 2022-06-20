@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\OAuthDropBoxAccessToken;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,20 @@ Route::get('/', function () {
 
 Route::get('/dropbox', function(){
 
-    if(Storage::disk('dropbox')->makeDirectory('Amicao_FileSystem')){
+    (new OAuthDropBoxAccessToken)->requestToken();
+    
+
+    $disk = Storage::build([
+        'driver' => 'dropbox',
+        'authorization_token' => $_ENV["DROPBOX_ACCESS_TOKEN"],
+    ]);
+
+    if($disk->makeDirectory('Amicao_FileSystem')){
         dd('directory created');
     }
     else{
         dd('Oh fuck! More Problems!!!');
     }
+
+    dd($_ENV["DROPBOX_ACCESS_TOKEN"]);
 });
