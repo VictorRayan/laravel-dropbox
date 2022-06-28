@@ -11,7 +11,7 @@
   </p>
 
 ## How was this project made?
-<p>This project has as base, the Composer library / dependencie <strong>victor-rayan/dropbox-rayan-vrsrb</strong> that is abstracted from Laravel Vendor layer to explore their objects to manage files in Dropbox via HTTP Curl requests. This library provides request methods, being them:</p>
+<p>This project has as base, the Composer library / dependencie <a href="https://github.com/VictorRayan/dropbox-rayan"><strong>victor-rayan/dropbox-rayan-vrsrb</strong></a> that is abstracted from Laravel Vendor layer to explore their objects to manage files in Dropbox via HTTP Curl requests. This library provides request methods, being them:</p>
 <ul>
   <li>Upload
   <li>Delete
