@@ -24,6 +24,31 @@
 To See in more details the vendor library abstraction and the Laravel Storage use in Controller class FileManager.php
 
 
+## Before execute this project, you need to add the following Environment Variables in .env file or in your server:
+
+```
+  DROPBOX_APP_KEY=Your app key
+  DROPBOX_APP_SECRET=Your app secret
+  DROPBOX_REFRESH_TOKEN=Your refresh token
+```
+
+## Where do I get these tokens?
+<ul>
+  <li>In first place, you must to access the your <a href="https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps">App Console</a>, and create an app. After created your app, you should to see your <strong>App Key</strong>, and <strong>App Secret</strong>.</li>
+  <li>To get the <strong>Refresh Token</strong> you can follow the <a href="https://www.dropbox.com/developers/documentation/http/documentation">Dropbox API HTTP Documentation</a> or execute the following URL into yout Browser. You must to get an Authorization Token that can be used once:<br><strong>https://www.dropbox.com/oauth2/authorize?client_id=<APP_KEY>&token_access_type=offline&response_type=code</strong><br></li>
+     
+   <li>Execute the following Curl Request into your Terminal, or translate this Curl to any programming language and get the your JSON output. You must to replace the GET paramaters with your correspondent velues, such as the Authoriation Token that you have obtained previously.:
+       
+         curl https://api.dropbox.com/oauth2/token \     -d grant_type=refresh_token \     -d refresh_token=<REFRESH_TOKEN> \     -u <APP_KEY>:<APP_SECRET>
+         
+   </li>
+   <li>Take the "refresh_token" value from JSON output and put it into your DROPBOX_REFRESH_TOKEN environment variable.</li>
+   
+   ### Now you're ready to execute this project!
+        
+       
+         
+         
 ##
 ## About Laravel
 
